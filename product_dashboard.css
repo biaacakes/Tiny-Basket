@@ -1,0 +1,227 @@
+/* General Styles */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #FFB0B0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #FFB0B0;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    width: 90%;
+    text-align: left;
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #FFF7D1; /* Changed hover color */
+    color: #222831;
+}
+
+/* Hide sidebar when closed */
+.sidebar.closed {
+    width: 0;
+    padding: 0;
+}
+
+/* Links inside the sidebar */
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #FFF7D1; /* Changed hover color */
+}
+
+/* Hide text when sidebar is closed */
+.sidebar.closed .sidebar-text {
+    display: none;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 15px;
+    right: -50px;
+    background: #FF4C4C;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+
+.toggle-btn:hover {
+    background: #FFF7D1; /* Changed hover color */
+}
+
+/* Main Content */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensures content stacks properly */
+    width: 100%;
+    padding: 40px;
+}
+
+.content {
+    background: #FFF7D1;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Table */
+.table {
+    background: #FFB0B0;
+    border-radius: 10px;
+}
+
+.table thead {
+    background: #FFD09B;
+    color: #222831;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #FFF7D1;
+}
+
+.table tbody tr:hover {
+    background: #FFF7D1; /* Changed hover color */
+    color: #222831;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #FFD09B;
+    border: none;
+    color: #222831;
+}
+
+.btn-primary:hover {
+    background: #FFB0B0;
+}
+
+.btn-danger {
+    background: #FFB0B0;
+    border: none;
+}
+
+.btn-danger:hover {
+    background: #FFF7D1; /* Changed hover color */
+    color: #222831;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+/* Table Header */
+.table thead {
+    background: #FFB0B0 !important;
+    color: #FFF7D1 !important;
+    font-weight: bold;
+}
+
+/* Table Cells */
+.table tbody tr:nth-child(even) {
+    background: #FFF7D1;
+}
+
+.table tbody tr:nth-child(odd) {
+    background: #FFECC8;
+}
+
+/* Table Borders */
+.table-bordered td,
+.table-bordered th {
+    border-color: #FFD09B !important;
+}
+
+/* Center the table inside the container */
+.table-responsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Ensure table width doesn't exceed container */
+.table {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+/* ... other styles ... */
+
+/* Search Bar Container */
+.input-group {
+    width: 100%; /* Make the search bar take full width of its container */
+    margin-top: 20px; /* Add some space above the search bar */
+}
+
+/* Search Input Field */
+#searchInput {
+    border-radius: 5px 0 0 5px; /* Rounded corners on the left */
+}
+
+/* Search Button */
+#searchButton {
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right */
+    background-color: #FFD09B; /* Example background color */
+    color: #222831; /* Example text color */
+    border-color: #FFD09B; /* Match button border to background */
+}
+
+#searchButton:hover {
+    background-color: #FFB0B0; /* Example hover background color */
+    color: white; /* Example hover text color */
+    border-color: #FFB0B0; /* Match button border to hover background */
+}
